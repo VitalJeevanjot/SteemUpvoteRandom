@@ -1,0 +1,29 @@
+.btn-large {
+  font-size: 2em;
+  margin-top: 2em;
+}
+
+body {
+  font-family: 'Libre Baskerville', serif;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background-color: #d81b60;
+}
+
+input[type=range]::-moz-range-thumb {
+  background-color: #d81b60;
+}
+
+input[type=range]::-ms-thumb {
+  background-color: #d81b60;
+}
+
+input[type=range]+.thumb {
+  background-color: #d81b60;
+}
+
+input[type=range]+.thumb.active .value {
+  color: white;
+  font-family: system-ui;
+}
