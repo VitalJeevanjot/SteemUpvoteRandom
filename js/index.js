@@ -1,7 +1,7 @@
 var author_all = [];
 var permlink_all = [];
 var rand;
-var glabal_val = 50;
+var global_val = 50;
 $(document).ready(function() {
   $('select').formSelect();
   $('.modal').modal({
@@ -78,12 +78,26 @@ function weight(val) {
 }
 
 function upvote() {
+
   rand = Math.floor(Math.random() * (99 - 1 + 1) + 1);
   // Still have to implement the function that if already a vote done over index on array or permlink....
 
-  var activeWif = steem.auth.toWif(localStorage.getItem("voter"), localStorage.getItem("pass"), 'active');
-  steem.broadcast.vote(activeWif, localStorage.getItem("voter"), author_all[rand], permlink_all[rand], global_val, function(err, result) {
-    console.log(err, result);
+  var activeWif = steem.auth.toWif(localStorage.getItem("voter"), localStorage.getItem("pass"), 'posting');
+
+
+  steem.broadcast.vote(activeWif, localStorage.getItem("voter"), author_all[rand], permlink_all[rand], global_val * 100, function(err, result) {
+    console.log(author_all[rand] + "--" + permlink_all[rand]);
+    if (!err) {
+      M.toast({
+        html: 'Done, You are so kind for new Posts!'
+      })
+    }
+    if (err) {
+      M.toast({
+        html: err
+      })
+    }
+
   });
 
 }
