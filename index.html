@@ -15,9 +15,28 @@
 </head>
 
 <body class="purple darken-1">
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Login With Steem Account</h4>
+      <label for="user_name">Username:</label>
+      <input placeholder="example_name_genievot" id="user_name" type="text" class="validate">
+
+      <label for="password">Password:</label>
+      <input placeholder="Password_Pxedfr4335453323sdsccdsq_hidden" id="password" type="text" class="validate">
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat" onclick="sign_in()" style="font-family:system-ui;">Signin</a>
+    </div>
+  </div>
+
+
   <nav>
     <div class="nav-wrapper pink darken-1">
       <a href="#" class="brand-logo center">SteemupRandom</a>
+      <a class="waves-effect waves-light btn-small pink darken-1" style="font-family:system-ui" onclick="reSignin()">Resign</a>
     </div>
   </nav>
 
