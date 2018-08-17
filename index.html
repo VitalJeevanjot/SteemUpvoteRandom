@@ -42,13 +42,13 @@
 
 
   <div class="row center" id="upvote_btn">
-    <a class="waves-effect waves-light btn-large pink darken-1">Upvote</a>
+    <a class="waves-effect waves-light btn-large pink darken-1" onclick="upvote()">Upvote</a>
   </div>
 
   <div class="container">
     <form action="#" style="margin-top:3em;">
       <p class="range-field">
-        <input type="range" id="test5" min="0" max="100" />
+        <input type="range" id="test5" min="0" max="100" oninput="weight(this.value)" />
       </p>
     </form>
   </div>
