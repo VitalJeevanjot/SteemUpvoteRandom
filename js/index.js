@@ -3,7 +3,7 @@ var permlink_all = [];
 var rand;
 var global_val = 50;
 $(document).ready(function() {
-  $('select').formSelect();
+  //$('select').formSelect();
   $('.modal').modal({
     dismissible: false
   });
